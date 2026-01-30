@@ -1,7 +1,29 @@
-function Contact() {
-  return<>
-  <h1>Contact page</h1>
-  </>
-}
+export default function Contact() {
+  return (
+    <section className="min-h-screen px-10 py-16 bg-gray-100">
+      <h2 className="text-3xl font-bold mb-6">Contact</h2>
 
-export default Contact;
+      <form className="max-w-md space-y-4">
+        <input
+          type="text"
+          placeholder="Your Name"
+          className="w-full p-3 border rounded"
+        />
+        <input
+          type="email"
+          placeholder="Your Email"
+          className="w-full p-3 border rounded"
+        />
+        <textarea
+          placeholder="Message"
+          className="w-full p-3 border rounded"
+          rows="4"
+        ></textarea>
+
+        <button className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">
+          Send
+        </button>
+      </form>
+    </section>
+  );
+}

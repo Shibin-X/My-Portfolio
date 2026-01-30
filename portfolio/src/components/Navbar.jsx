@@ -1,32 +1,17 @@
 import { Link } from "react-router-dom";
-import styles from "./Navbar.module.css";
 
-function Navbar() {
+export default function Navbar() {
   return (
-    <div className={styles.navbar}>
-      <div className={styles.navContainer}>
-        <div className={styles.logo}>SHIBIN's Portfolio</div>
+    <nav className="bg-gray-900 text-white px-6 py-4 flex justify-between items-center">
+      <h1 className="text-xl font-bold">SHIBIN's Portfolio</h1>
 
-        <ul className={styles.navList}>
-          <li>
-            <Link to="/" className={styles.navLink}>HOME</Link>
-          </li>
-          <li>
-            <Link to="/about" className={styles.navLink}>ABOUT</Link>
-          </li>
-          <li>
-            <Link to="/skills" className={styles.navLink}>SKILLS</Link>
-          </li>
-          <li>
-            <Link to="/project" className={styles.navLink}>PROJECTS</Link>
-          </li>
-          <li>
-            <Link to="/contact" className={styles.navLink}>CONTACT</Link>
-          </li>
-        </ul>
-      </div>
-    </div>
+      <ul className="flex gap-6 text-sm font-medium">
+        <li><Link to="/" className="hover:text-blue-400">Home</Link></li>
+        <li><Link to="/about" className="hover:text-blue-400">About</Link></li>
+        <li><Link to="/skills" className="hover:text-blue-400">Skills</Link></li>
+        <li><Link to="/project" className="hover:text-blue-400">Projects</Link></li>
+        <li><Link to="/contact" className="hover:text-blue-400">Contact</Link></li>
+      </ul>
+    </nav>
   );
 }
-
-export default Navbar;
